@@ -1,0 +1,19 @@
+# .github/workflows/main.yml
+name: "Deployment Verification"
+
+# Trigger this workflow on every push to the main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  verification:
+    runs-on: ubuntu-latest
+    steps:
+      # This is the required step with the email in its name
+      - name: "Run check for 22f3002614@ds.study.iitm.ac.in"
+        run: echo "Verification step completed."
+
+      - name: "Another example step"
+        run: echo "Hello, world!"
